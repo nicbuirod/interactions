@@ -1,0 +1,251 @@
+.container {
+  width: 100%;
+}
+.container_up {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+}
+.section {
+  width: 25%;
+  height: 100%;
+  border: solid 1px rgba(255, 255, 255, 0.521);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 50px;
+  background-color: white;
+  background-image: linear-gradient(to left, black 50%, transparent 50%),
+    linear-gradient(to right, black 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0, 0 0;
+
+  transition: background-position 0.3s ease;
+
+  & > span {
+    margin: 30px;
+  }
+}
+
+.section_video {
+  width: 25%;
+  height: 100%;
+  border: solid 1px rgba(255, 255, 255, 0.521);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  background-color: white;
+  background-image: linear-gradient(to left, black 50%, transparent 50%),
+    linear-gradient(to right, black 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0, 0 0;
+
+  transition: background-position 0.3s ease;
+  overflow: hidden;
+}
+
+.section:hover {
+  background-position: 0 0, 100% 0;
+}
+
+.work {
+  width: 100%;
+  height: 100vh;
+  font-size: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  position: relative;
+}
+.cuadrado {
+  width: 100vw;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: center;
+}
+.image1 {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: start;
+  margin-top: 49%;
+}
+.image2 {
+  font-size: 22px;
+  text-align: start;
+  margin-top: 75%;
+  & > p {
+    font-size: 12px;
+  }
+}
+.image3 {
+  font-size: 22px;
+  text-align: start;
+  margin-top: 110%;
+  & > p {
+    font-size: 12px;
+  }
+}
+.text_work {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.text_work2 {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  color: grey;
+}
+
+.white {
+  width: 100%;
+  height: 100%;
+}
+
+.cuadrado::-webkit-scrollbar {
+  display: none;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: white;
+  height: 25px;
+  border-radius: 50%;
+}
+.arrow_icon {
+  width: 100%;
+  height: 25px;
+}
+.white_color {
+  color: white;
+}
+.black_color {
+  color: black;
+}
+
+@media (max-width: 390px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container_up {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
+    height: 100%;
+    border: solid 1px rgba(255, 255, 255, 0.521);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 50px;
+    background-color: white;
+    background-image: linear-gradient(to left, black 50%, transparent 50%),
+      linear-gradient(to right, black 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0, 0 0;
+
+    transition: background-position 0.3s ease;
+
+    & > span {
+      margin: 30px;
+    }
+  }
+  .section_video {
+    display: none;
+  }
+
+  .work {
+    width: 100%;
+    height: 600px;
+    font-size: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .text_work {
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+  }
+
+  .text_work2 {
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    color: grey;
+  }
+
+  .cuadrado {
+    width: 100%;
+    height: 600px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    align-items: flex-start;
+    position: relative;
+  }
+  .image1 {
+    font-size: 22px;
+    width: 180px;
+    text-align: start;
+    margin-top: 500%;
+    & > img {
+      width: 180px;
+    }
+    margin-left: 30px;
+  }
+  .image2 {
+    font-size: 22px;
+    text-align: start;
+    margin-top: 0px;
+    width: 180px;
+    & > p {
+      font-size: 12px;
+    }
+    & > img {
+      width: 180px;
+    }
+    margin-left: 50px;
+  }
+  .image3 {
+    width: 180px;
+    font-size: 22px;
+    text-align: start;
+    margin-top: 1%;
+    & > p {
+      font-size: 12px;
+    }
+    & > img {
+      width: 180px;
+    }
+    margin-left: 150px;
+  }
+}
